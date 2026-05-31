@@ -1,0 +1,59 @@
+@import "@inkress/apps-core/styles.css";
+
+/* Event Tickets — event cards + door check-in. */
+
+.et-code { font-family: var(--mono); font-size: 0.8125rem; letter-spacing: 0.04em; }
+
+.et-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.et-card { padding: 16px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--e1); }
+.et-card.is-off { opacity: 0.7; }
+.et-card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.et-when { font-size: 0.8125rem; margin: 3px 0 8px; }
+.et-price { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
+.et-stats { display: flex; gap: 14px; font-size: 0.8125rem; margin-bottom: 12px; }
+.et-link { display: flex; gap: 6px; margin-bottom: 10px; }
+.et-link-input { font-size: 0.72rem; height: 32px; color: var(--ink-soft); }
+.et-actions { display: flex; gap: 6px; align-items: center; }
+.et-open { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--line-strong); border-radius: 7px; color: var(--ink-soft); }
+.et-open:hover { background: var(--panel); }
+.et-note { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+
+.et-form { display: flex; flex-direction: column; gap: 12px; }
+.et-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.et-field { display: flex; flex-direction: column; gap: 5px; }
+.et-check { display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--ink-soft); }
+.et-check input { width: auto; height: auto; }
+
+.et-checkin { max-width: 480px; }
+.et-checkin-row { display: flex; gap: 8px; margin: 10px 0; }
+.et-checkin-row input { height: 48px; }
+.et-checkin-row button { height: 48px; padding: 0 20px; }
+.et-ck { display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: var(--r); margin-top: 6px; }
+.et-ck-ok { background: var(--ok-wash); color: var(--ok); }
+.et-ck-warn { background: var(--warn-wash); color: oklch(0.5 0.12 70); }
+.et-ck-bad { background: var(--bad-wash); color: var(--bad); }
+
+.et-scan-bar { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+.et-scan { position: relative; margin: 6px 0 4px; border-radius: var(--r); overflow: hidden; background: #000; max-width: 380px; aspect-ratio: 4 / 3; }
+.et-scan-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.et-scan-frame { position: absolute; inset: 18%; border: 3px solid rgba(255,255,255,0.85); border-radius: 14px; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.25); }
+
+/* event card visuals */
+.et-card { padding: 0; overflow: hidden; --ac: #6741d9; }
+.et-card-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.et-poster { display: block; height: 120px; background-size: cover; background-position: center; }
+.et-stripe { display: block; height: 5px; background: var(--ac); }
+.et-note { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+
+/* tiers editor */
+.et-field-color input[type="color"] { width: 56px; height: 38px; padding: 2px; border-radius: 8px; cursor: pointer; }
+.et-imgbtns { display: flex; gap: 8px; }
+.et-tiers-edit { display: flex; flex-direction: column; gap: 6px; }
+.et-tier-head { display: grid; grid-template-columns: 1fr 90px 70px 30px; gap: 6px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.et-tier-row { display: grid; grid-template-columns: 1fr 90px 70px 30px; gap: 6px; align-items: center; }
+.et-tier-row input { width: 100%; box-sizing: border-box; }
+
+/* toolbar */
+.et-toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.et-search { min-width: 130px; }
+.et-row-actions { display: flex; gap: 6px; justify-content: flex-end; align-items: center; flex-wrap: wrap; }
